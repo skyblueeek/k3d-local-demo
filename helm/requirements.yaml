@@ -1,0 +1,30 @@
+dependencies:
+- name: cert-manager
+  version: 1.6.x
+  repository: https://charts.jetstack.io
+
+- name: mariadb
+  version: 10.0.x
+  repository: https://charts.bitnami.com/bitnami
+
+- name: redis
+  version: 15.6.x
+  repository: https://charts.bitnami.com/bitnami
+
+- name: rabbitmq-cluster-operator
+  version: 2.0.4
+  repository: https://charts.bitnami.com/bitnami
+
+- name: elasticsearch
+  version: 7.15.x
+  repository: https://helm.elastic.co
+
+## !!DEPRECATED - Being retired
+
+- name: redis-ha
+  version: 3.7.1
+  repository: https://charts.helm.sh/stable
+
+- name: rabbitmq-ha
+  version: 1.46.4
+  repository: https://charts.helm.sh/stable
