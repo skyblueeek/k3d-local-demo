@@ -49,3 +49,5 @@ Thumbs.db
 *.wmv
 
 charts/
+install_the_things.txt
+aws-creds.conf
