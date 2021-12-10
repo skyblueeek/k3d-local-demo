@@ -34,3 +34,14 @@ helm upgrade --install \
     --create-namespace \
     sealed-secrets-controller \
     sealed-secrets/sealed-secrets
+
+echo INSTALLING ARGOCD
+helm upgrade --install \
+    argocd argo/argo-cd \
+    --namespace argocd \
+    --create-namespace \
+    --set server.ingress.hosts="{kubernetes.docker.internal, argo-cd.76.234.234.104.nip.io}" \
+    --set server.ingress.enabled=true \
+    --set server.extraArgs="{--insecure}" \
+    --set controller.args.appResyncPeriod=30 \
+    --wait

@@ -4,9 +4,9 @@ kind: Simple
 name: local-5k-core
 
 ## Cluster configs
-# servers: 1
-# agents: 1
-image: rancher/k3s:v1.21.7-k3s1
+servers: 3
+agents: 3
+image: rancher/k3s:v1.22.4-k3s1
 # image: rancher/k3s:v1.22.4-k3s1
 kubeAPI:
   host: "kubernetes.docker.internal" # important for the `server` setting in the kubeconfig
@@ -39,15 +39,15 @@ options:
     updateDefaultKubeconfig: true
     switchCurrentContext: true
 ports:
-  - port: 80:80
+  - port: 8080:80
     nodeFilters:
       - loadbalancer
   - port: 443:443
     nodeFilters:
       - loadbalancer
-  - port: 8088:8088
-    nodeFilters:
-      - loadbalancer
+  # - port: 8088:8088
+  #   nodeFilters:
+  #     - loadbalancer
   # - port: 3000:3000
   #   nodeFilters:
   #     - loadbalancer
