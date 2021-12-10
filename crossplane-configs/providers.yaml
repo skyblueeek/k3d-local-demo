@@ -1,0 +1,28 @@
+---
+
+apiVersion: aws.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: default
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: aws-creds
+      key: creds
+
+# ---
+
+# apiVersion: civo.crossplane.io/v1alpha1
+# kind: ProviderConfig
+# metadata:
+#   name: provider-civo
+# spec:
+#   region: nyc1
+#   credentials:
+#     source: Secret
+#     secretRef:
+#       namespace: crossplane-system
+#       name: civo-creds
+#       key: credentials
