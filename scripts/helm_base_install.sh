@@ -28,12 +28,12 @@ helm upgrade --install \
     --set installCRDs=true
 
 # Sealed Secrets
-echo INSTALLING SEALED SECRETS
-helm upgrade --install \
-    --namespace kube-system \
-    --create-namespace \
-    sealed-secrets-controller \
-    sealed-secrets/sealed-secrets
+# echo INSTALLING SEALED SECRETS
+# helm upgrade --install \
+#     --namespace kube-system \
+#     --create-namespace \
+#     sealed-secrets-controller \
+#     sealed-secrets/sealed-secrets
 
 echo INSTALLING ARGOCD
 helm upgrade --install \
@@ -46,15 +46,15 @@ helm upgrade --install \
     --set controller.args.appResyncPeriod=30 \
     --wait
 
-echo CREATING AWS SEALED-SECRET
-kubectl --namespace crossplane-system \
-    create secret generic aws-creds \
-    --from-file creds=./aws-creds.conf \
-    --output json \
-    --dry-run=client \
-    | kubeseal --format yaml \
-    | tee crossplane/configs/aws-creds.yaml
+# echo CREATING AWS SEALED-SECRET
+# kubectl --namespace crossplane-system \
+#     create secret generic aws-creds \
+#     --from-file creds=./aws-creds.conf \
+#     --output json \
+#     --dry-run=client \
+#     | kubeseal --format yaml \
+#     | tee crossplane/configs/aws-creds.yaml
 
 
-echo YOUR ARGO PASSWORD IS:
+# echo YOUR ARGO PASSWORD IS:
 # echo kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
