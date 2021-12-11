@@ -12,7 +12,32 @@ spec:
       name: aws-creds
       key: creds
 
-# ---
+---
+
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-helm
+spec:
+  package: "crossplane/provider-helm:master"
+
+---
+
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-kubernetes
+spec:
+  package: "crossplane/provider-kubernetes:main"
+
+---
+
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-terraform
+spec:
+  package: "crossplane/provider-terraform:main"
 
 # apiVersion: civo.crossplane.io/v1alpha1
 # kind: ProviderConfig
