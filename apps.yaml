@@ -5,8 +5,8 @@ kind: Application
 metadata:
   name: 5k-core
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  # finalizers:
+  #   - resources-finalizer.argocd.argoproj.io
 spec:
   project: 5k-core
   source:
