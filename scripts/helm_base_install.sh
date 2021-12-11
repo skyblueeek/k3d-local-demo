@@ -40,8 +40,21 @@ helm upgrade --install \
     argocd argo/argo-cd \
     --namespace argocd \
     --create-namespace \
-    --set server.ingress.hosts="{kubernetes.docker.internal, argo-cd.76.234.234.104.nip.io}" \
+    --set server.ingress.hosts="{kubernetes.docker.internal}" \
     --set server.ingress.enabled=true \
     --set server.extraArgs="{--insecure}" \
     --set controller.args.appResyncPeriod=30 \
     --wait
+
+echo CREATING AWS SEALED-SECRET
+kubectl --namespace crossplane-system \
+    create secret generic aws-creds \
+    --from-file creds=./aws-creds.conf \
+    --output json \
+    --dry-run=client \
+    | kubeseal --format yaml \
+    | tee crossplane-configs/aws-creds.yaml
+
+
+echo YOUR ARGO PASSWORD IS:
+# echo kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
