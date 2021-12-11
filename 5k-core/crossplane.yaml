@@ -36,7 +36,7 @@ metadata:
 spec:
   project: 5k-core
   source:
-    path: crossplane-providers
+    path: crossplane/providers
     repoURL: https://github.com/armenr/k3d-local-demo
     targetRevision: HEAD
   destination:
@@ -59,7 +59,7 @@ metadata:
 spec:
   project: 5k-core
   source:
-    path: crossplane-configs
+    path: crossplane/configs
     repoURL: https://github.com/armenr/k3d-local-demo
     targetRevision: HEAD
   destination:
@@ -82,7 +82,7 @@ metadata:
 spec:
   project: 5k-core
   source:
-    path: crossplane-compositions
+    path: crossplane/compositions
     repoURL: https://github.com/armenr/k3d-local-demo
     targetRevision: HEAD
   destination:
