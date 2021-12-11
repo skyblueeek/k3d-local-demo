@@ -53,7 +53,7 @@ kubectl --namespace crossplane-system \
     --output json \
     --dry-run=client \
     | kubeseal --format yaml \
-    | tee crossplane-configs/aws-creds.yaml
+    | tee crossplane/configs/aws-creds.yaml
 
 
 echo YOUR ARGO PASSWORD IS:
