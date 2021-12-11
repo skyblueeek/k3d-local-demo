@@ -26,14 +26,16 @@ helm upgrade --install \
     --namespace cert-manager \
     --create-namespace \
     --set installCRDs=true
+    --wait
 
 # Sealed Secrets
-# echo INSTALLING SEALED SECRETS
-# helm upgrade --install \
-#     --namespace kube-system \
-#     --create-namespace \
-#     sealed-secrets-controller \
-#     sealed-secrets/sealed-secrets
+echo INSTALLING SEALED SECRETS
+helm upgrade --install \
+    --namespace kube-system \
+    --create-namespace \
+    sealed-secrets-controller \
+    sealed-secrets/sealed-secrets \
+    --wait
 
 echo INSTALLING ARGOCD
 helm upgrade --install \
