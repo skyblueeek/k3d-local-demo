@@ -80,7 +80,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: 5k-core
   source:
     path: crossplane-compositions
     repoURL: https://github.com/armenr/k3d-local-demo
