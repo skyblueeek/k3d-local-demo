@@ -25,13 +25,13 @@ helm upgrade --install \
     jetstack/cert-manager \
     --namespace cert-manager \
     --create-namespace \
-    --set installCRDs=true
+    --set installCRDs=true\
     --wait
 
 # Sealed Secrets
 echo INSTALLING SEALED SECRETS
 helm upgrade --install \
-    --namespace kube-system \
+    --namespace argocd \
     --create-namespace \
     sealed-secrets-controller \
     sealed-secrets/sealed-secrets \
@@ -49,13 +49,13 @@ helm upgrade --install \
     --wait
 
 # echo CREATING AWS SEALED-SECRET
-# kubectl --namespace crossplane-system \
-#     create secret generic aws-creds \
-#     --from-file creds=./aws-creds.conf \
-#     --output json \
-#     --dry-run=client \
-#     | kubeseal --format yaml \
-#     | tee crossplane/configs/aws-creds.yaml
+kubectl --namespace crossplane-system \
+    create secret generic aws-creds \
+    --from-file creds=./aws-creds.conf \
+    --output json \
+    --dry-run=client \
+    | kubeseal --format yaml \
+    | tee crossplane/configs/aws-creds.yaml
 
 
 # echo YOUR ARGO PASSWORD IS:
