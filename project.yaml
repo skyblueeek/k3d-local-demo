@@ -4,8 +4,8 @@ kind: AppProject
 metadata:
   name: 5k-core
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  # finalizers:
+  #   - resources-finalizer.argocd.argoproj.io
 spec:
   description: 5thKind CORE
   sourceRepos:
