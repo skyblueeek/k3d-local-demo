@@ -434,6 +434,23 @@ spec:
             fmt: "%s-ekscluster"
     readinessChecks:
       - type: None
+  # - name: kubevela
+  #   base:
+  #     apiVersion: helm.crossplane.io/v1beta1
+  #     kind: Release
+  #     spec:
+  #       rollbackLimit: 3
+  #       forProvider:
+  #         namespace: vela-system
+  #         chart:
+  #           name: vela-core
+  #           repository: https://charts.kubevela.net/core
+  #           version: "1.1.13"
+  #   patches:
+  #   - fromFieldPath: spec.id
+  #     toFieldPath: metadata.name
+  #   - fromFieldPath: spec.id
+  #     toFieldPath: spec.providerConfigRef.name
   - name: kubevela
     base:
       apiVersion: helm.crossplane.io/v1beta1
@@ -441,11 +458,11 @@ spec:
       spec:
         rollbackLimit: 3
         forProvider:
-          namespace: vela-system
+          namespace: cert-manager
           chart:
-            name: vela-core
-            repository: https://charts.kubevela.net/core
-            version: "1.1.13"
+            name: cert-manager
+            repository: https://charts.jetstack.io
+            version: "1.6.1"
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
