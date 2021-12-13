@@ -22,7 +22,7 @@ spec:
       kind: Cluster
       spec:
         forProvider:
-          region: us-east-1
+          region: us-west-2
           version: "1.21"
           roleArnSelector:
             matchControllerRef: true
@@ -64,7 +64,7 @@ spec:
       kind: NodeGroup
       spec:
         forProvider:
-          region: us-east-1
+          region: us-west-2
           clusterNameSelector:
             matchControllerRef: true
           nodeRoleSelector:
@@ -264,7 +264,7 @@ spec:
       kind: VPC
       spec:
         forProvider:
-          region: us-east-1
+          region: us-west-2
           cidrBlock: 10.0.0.0/16
           enableDnsSupport: true
     patches:
@@ -278,7 +278,7 @@ spec:
         forProvider:
           description: Cluster communication with worker nodes
           groupName: devops-catalog
-          region: us-east-1
+          region: us-west-2
           vpcIdSelector:
             matchControllerRef: true
           egress:
@@ -296,12 +296,12 @@ spec:
       kind: Subnet
       metadata:
         labels:
-          zone: us-east-1a
+          zone: us-west-2a
           access: public
       spec:
         forProvider:
-          region: us-east-1
-          availabilityZone: us-east-1a
+          region: us-west-2
+          availabilityZone: us-west-2a
           cidrBlock: 10.0.0.0/24
           vpcIdSelector:
             matchControllerRef: true
@@ -322,12 +322,12 @@ spec:
       kind: Subnet
       metadata:
         labels:
-          zone: us-east-1b
+          zone: us-west-2b
           access: public
       spec:
         forProvider:
-          region: us-east-1
-          availabilityZone: us-east-1b
+          region: us-west-2
+          availabilityZone: us-west-2b
           cidrBlock: 10.0.1.0/24
           vpcIdSelector:
             matchControllerRef: true
@@ -348,12 +348,12 @@ spec:
       kind: Subnet
       metadata:
         labels:
-          zone: us-east-1c
+          zone: us-west-2c
           access: public
       spec:
         forProvider:
-          region: us-east-1
-          availabilityZone: us-east-1c
+          region: us-west-2
+          availabilityZone: us-west-2c
           cidrBlock: 10.0.2.0/24
           vpcIdSelector:
             matchControllerRef: true
@@ -374,7 +374,7 @@ spec:
       kind: InternetGateway
       spec:
         forProvider:
-          region: us-east-1
+          region: us-west-2
           vpcIdSelector:
             matchControllerRef: true
     patches:
@@ -386,7 +386,7 @@ spec:
       kind: RouteTable
       spec:
         forProvider:
-          region: us-east-1
+          region: us-west-2
           vpcIdSelector:
             matchControllerRef: true
           routes:
@@ -397,17 +397,17 @@ spec:
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
-                  zone: us-east-1a
+                  zone: us-west-2a
                   access: public
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
-                  zone: us-east-1b
+                  zone: us-west-2b
                   access: public
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
-                  zone: us-east-1c
+                  zone: us-west-2c
                   access: public
     patches:
     - fromFieldPath: spec.id
