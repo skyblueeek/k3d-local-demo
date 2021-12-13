@@ -30,6 +30,7 @@ spec:
   package: "crossplane/provider-kubernetes:v0.1.0"
 
 ---
+
 # TERRAFORM PROVIDER - kube-ify terraforming
 # https://github.com/crossplane-contrib/provider-terraform
 # apiVersion: pkg.crossplane.io/v1
