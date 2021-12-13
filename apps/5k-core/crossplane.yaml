@@ -1,5 +1,6 @@
 ---
-#comment
+
+# Installs & manages Crossplane
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -14,7 +15,7 @@ spec:
     repoURL: https://charts.crossplane.io/stable
     targetRevision: "1.5.1"
   destination:
-    namespace: argocd
+    namespace: crossplane-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
@@ -26,6 +27,7 @@ spec:
 
 ---
 
+# Installs and manages Crossplane providers
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -49,6 +51,7 @@ spec:
 
 ---
 
+# Installs and manages Crossplane-related configs
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -72,6 +75,7 @@ spec:
 
 ---
 
+# Deploys and manages latest Crossplane compositions
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
