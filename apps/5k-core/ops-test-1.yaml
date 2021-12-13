@@ -1,20 +1,20 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: ops-test-1
-  namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  project: 5k-core
-  source:
-    path: environments/ops-test-1
-    repoURL: https://github.com/armenr/k3d-local-demo
-    targetRevision: HEAD
-  destination:
-    server: https://kubernetes.default.svc
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-      allowEmpty: true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: ops-test-1
+#   namespace: argocd
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+# spec:
+#   project: 5k-core
+#   source:
+#     path: environments/ops-test-1
+#     repoURL: https://github.com/armenr/k3d-local-demo
+#     targetRevision: HEAD
+#   destination:
+#     server: https://kubernetes.default.svc
+#   syncPolicy:
+#     automated:
+#       selfHeal: true
+#       prune: true
+#       allowEmpty: true
