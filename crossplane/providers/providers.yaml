@@ -32,10 +32,10 @@ spec:
 ---
 
 # TERRAFORM PROVIDER - kube-ify terraforming
-# https://github.com/crossplane-contrib/provider-terraform
-# apiVersion: pkg.crossplane.io/v1
-# kind: Provider
-# metadata:
-#   name: provider-terraform
-# spec:
-#   package: "crossplane/provider-terraform:master"
+https://github.com/crossplane-contrib/provider-terraform
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-terraform
+spec:
+  package: "crossplane/provider-terraform:master"
