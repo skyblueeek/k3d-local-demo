@@ -3,7 +3,7 @@ kind: Simple
 name: local-5k-core
 servers: 2
 agents: 2
-image: rancher/k3s:v1.22.4-k3s1
+image: rancher/k3s:v1.21.7-k3s1
 kubeAPI:
   host: "kubernetes.docker.internal"
   hostIP: "127.0.0.1"
