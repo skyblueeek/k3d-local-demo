@@ -37,4 +37,4 @@ kind: Provider
 metadata:
   name: provider-terraform
 spec:
-  package: "crossplane/provider-terraform:main"
+  package: "crossplane/provider-terraform:master"
