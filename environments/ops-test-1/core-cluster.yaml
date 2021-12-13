@@ -1,11 +1,11 @@
 apiVersion: 5thkind.dev/v1alpha1
 kind: CompositeCluster
 metadata:
-  name: team-a
+  name: ops-test-1
   labels:
     cluster-owner: arostamian
 spec:
-  id: team-a
+  id: ops-test-1
   compositionRef:
     name: cluster-aws
   parameters:
