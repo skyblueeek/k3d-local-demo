@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-a-infra
+  name: ops-test-1
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: 5k-core
   source:
-    path: environments/team-a-infra
+    path: environments/ops-test-1
     repoURL: https://github.com/armenr/k3d-local-demo
     targetRevision: HEAD
   destination:

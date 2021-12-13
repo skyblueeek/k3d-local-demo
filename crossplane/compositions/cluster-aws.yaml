@@ -451,7 +451,7 @@ spec:
   #     toFieldPath: metadata.name
   #   - fromFieldPath: spec.id
   #     toFieldPath: spec.providerConfigRef.name
-  - name: kubevela
+  - name: cert-manager
     base:
       apiVersion: helm.crossplane.io/v1beta1
       kind: Release
@@ -463,6 +463,9 @@ spec:
             name: cert-manager
             repository: https://charts.jetstack.io
             version: "1.6.1"
+          set:
+            - name: installCRDs
+              value: "true"
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
