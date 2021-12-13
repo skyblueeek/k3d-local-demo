@@ -445,7 +445,7 @@ spec:
           chart:
             name: vela-core
             repository: https://charts.kubevela.net/core
-            version: "1.0.7"
+            version: "1.2.0-nightly-build"
     patches:
     - fromFieldPath: spec.id
       toFieldPath: metadata.name
