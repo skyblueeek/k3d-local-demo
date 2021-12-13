@@ -15,15 +15,15 @@ spec:
     repoURL: https://charts.crossplane.io/stable
     targetRevision: "1.5.1"
   destination:
-    namespace: crossplane-system
+    namespace: argocd
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
       allowEmpty: true
-    syncOptions:
-    - CreateNamespace=true
+    # syncOptions:
+    # - CreateNamespace=true
 
 ---
 

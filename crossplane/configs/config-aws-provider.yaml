@@ -8,6 +8,6 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: crossplane-system
+      namespace: argocd
       name: aws-creds
       key: creds

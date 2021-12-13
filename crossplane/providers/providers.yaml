@@ -6,7 +6,7 @@ kind: Provider
 metadata:
   name: provider-aws
 spec:
-  package: crossplane/provider-aws:master
+  package: crossplane/provider-aws:v0.21.2
 
 ---
 # HELM PROVIDER

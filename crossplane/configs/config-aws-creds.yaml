@@ -3,7 +3,7 @@ kind: SealedSecret
 metadata:
   creationTimestamp: null
   name: aws-creds
-  namespace: crossplane-system
+  namespace: argocd
 spec:
   encryptedData:
     creds: AgAeakij9mI3jexAc65W6nLYnwcWQmbpOT0yY5Oi+BJTiQDaZ7ipF5T6CAMvFe+FlqUPgeUcGxzkcL2wtEL2VIRMsAVu7egaXlrDG2dRTVJITiVaFSlzJXnfnriL647bub7lHQBStyF5RyknJwMUYdXAnxloO8e40HdcezKQpCX5oQ3RGBmcJ553vF64yGgnsGCHK1ZKegvyqHOypOCoqN9bkiG2zuXq7oCq3mbS1JArdYzt/piHE8VBv3gAd9N2Gj+yKq0KcNvt6qS5Oj+wlcRL1aDR7jks4u+JoTwh7ZkfILnIp41eXDjezR+GVIlJyXib+iWlSaji5gE5FimXLMHXuSEBzRMSWOyFfb5JYjqfWYqedyEQn8EtcqXLonr9AzBYbkNUGAUl2fxBbAHLwNF7A+TFyRFP4R86eBHx2rWa/GoxUm2e1Ea+QKLCYamTthpJyei3mg4RPOpgEazKuXKluimPqRz+2FAr2tlaq0FW+F40hmZTksX3UBoCSxrQ+75rP/nLrz52hyiWS9PPXfv7Lfy2AOERE3MxvBvY3W2zZxZScWjx/I9hxLe4MbArPFtji3T9Bnl6Y13BW36P6jiqh7yT7Xi4jS7ookr42wpHnkDq3vsidE6mPAPPADWwi5dy0tEpIdQ7x/9KahMJjXeK8WqopNDEZ+vtpUsAmtT+UsOW38xSmpzgaAgZiAniO7pvM4jiGwWxoUqLIsAszy0VnGBNgbPoS5idIMvb3ZlwHpuvex5A0uXAqY00Nwg/6OYHWER+267DWsYiZ3rHfcHMy9AfPfI+kEb8miropOC0YOcWQUMkgS+Q/DhSrGxoFsoRou6tLJJXXty8XQcGn/JoI+ikjtk=
@@ -12,5 +12,5 @@ spec:
     metadata:
       creationTimestamp: null
       name: aws-creds
-      namespace: crossplane-system
+      namespace: argocd
 

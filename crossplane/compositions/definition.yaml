@@ -6,7 +6,7 @@ spec:
   connectionSecretKeys:
   - kubeconfig
   defaultCompositionRef:
-    name: cluster-google
+    name: cluster-aws
   group: 5thkind.dev
   names:
     kind: CompositeCluster
