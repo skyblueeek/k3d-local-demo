@@ -32,7 +32,7 @@ spec:
 ---
 
 # TERRAFORM PROVIDER - kube-ify terraforming
-https://github.com/crossplane-contrib/provider-terraform
+# https://github.com/crossplane-contrib/provider-terraform
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
