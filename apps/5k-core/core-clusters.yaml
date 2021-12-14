@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ops-test-1
+  name: 5k-core
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
