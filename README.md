@@ -38,10 +38,28 @@ helm upgrade --install \
 # install, configure, and prepare ArgoCD (yes, it's a terrible BASH script...)
 ./scripts/argo_provision.sh
 
+# go grab your AWS credentials - Key ID and Secret Key
+
+cp aws-creds.conf.example aws-creds.conf
+
+# Add your API keys to the new conf file
+# THEN --> 
+# generate a "sealed secret" for your aws credentials
+
+./scripts/secrets_generate_aws_creds.sh
+
+# This generates/regenerates a sealed-secret in /crossplane/configs/config-aws-creds.yaml
+
+# Add safely-sealed secrets and push to git
+git add crossplane/configs/config-aws-creds.yaml
+git commit -m "secrets(aws): Generate AWS sealed secrets
+git push
+
 # access Argo UI in browser
 # WE ASSUME that YOU are on a Mac, and you have the following in /etc/hosts (of your macbook) --> 127.0.0.1 kubernetes.docker.internal
 
 https://kubernetes.docker.internal
+
 
 ```
 
