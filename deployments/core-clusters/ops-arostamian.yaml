@@ -1,4 +1,4 @@
-# apiVersion: 5thkind.dev/v1alpha1
+apiVersion: 5thkind.dev/v1alpha1
 kind: CompositeCluster
 metadata:
   name: ops-test-1
