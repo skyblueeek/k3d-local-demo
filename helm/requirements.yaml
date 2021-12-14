@@ -28,3 +28,12 @@ dependencies:
 - name: rabbitmq-ha
   version: 1.46.4
   repository: https://charts.helm.sh/stable
+
+## NFS
+## S3 
+## Need SMTP (you can use SES)
+## Local Docker Registry or ECR
+
+## Dockerize Aspera
+## SSL Cert injection w/ Nginx exposing/terminating that -- storing cert material as sealed-secret
+## 
