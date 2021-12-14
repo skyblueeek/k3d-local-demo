@@ -11,4 +11,5 @@ kubectl delete -f ../project.yaml --wait
 echo $'\n!! I NUKE ARGO NAMESPACE FOR YOU !! \n'
 kubectl delete namespaces argocd --wait
 
+echo $'#####################___COMPLETED___#########################\n'
 echo $'\n!! ALL TRACES OF ARGOCD SUCCESSFULLY NUKED !! \n'
