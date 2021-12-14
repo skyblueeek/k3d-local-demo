@@ -2,7 +2,7 @@
 set -o nounset
 set -o errexit
 
-echo $'\n!! Installing ArgoCD from HELM !! \n'
+echo $'\n!! Installing ArgoCD + Web UI Ingress from HELM !! \n'
 helm upgrade --install \
     argocd argo/argo-cd \
     --namespace argocd \
@@ -12,7 +12,6 @@ helm upgrade --install \
     --set server.extraArgs="{--insecure}" \
     --set controller.args.appResyncPeriod=30 \
     --wait
-
 
 echo $'\n##################################################################\n'
 
