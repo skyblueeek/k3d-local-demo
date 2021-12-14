@@ -1,15 +1,15 @@
 # apiVersion: 5thkind.dev/v1alpha1
-# kind: CompositeCluster
-# metadata:
-#   name: ops-test-1
-#   labels:
-#     cluster-owner: ops-arostamian
-# spec:
-#   id: ops-test-1
-#   compositionRef:
-#     name: cluster-aws
-#   parameters:
-#     # Possible values small, medium, large
-#     nodeSize: small
-#     # version: "1.20"
-#     # minNodeCount: 1
+kind: CompositeCluster
+metadata:
+  name: ops-test-1
+  labels:
+    cluster-owner: ops-arostamian
+spec:
+  id: ops-test-1
+  compositionRef:
+    name: cluster-aws
+  parameters:
+    # Possible values small, medium, large
+    nodeSize: small
+    # version: "1.20"
+    minNodeCount: 1
