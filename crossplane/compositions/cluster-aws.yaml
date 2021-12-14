@@ -10,7 +10,7 @@ spec:
   compositeTypeRef:
     apiVersion: 5thkind.dev/v1alpha1
     kind: CompositeCluster
-  writeConnectionSecretsToNamespace: crossplane-system
+  writeConnectionSecretsToNamespace: argocd
   patchSets:
   - name: metadata
     patches:
