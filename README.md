@@ -66,7 +66,9 @@ THEN, in that NEW file, edit:
 `spec --> id --> <yourclustername>`
 
 git add .
+
 git commit
+
 git push
 
 Go back to Argo, click into the "core-clusters" app, and look for your new cluster to spin up in AWS...it will take a LONG while (due to AWS EKS being very slow, not ArgoCD)
