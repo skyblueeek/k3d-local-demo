@@ -8,11 +8,11 @@ kubeAPI:
   host: "kubernetes.docker.internal"
   hostIP: "127.0.0.1"
   hostPort: "6445"
-volumes:
-  - volume: /tmp/k3dvol:/opt #
-    nodeFilters:
-      - server:*
-      - agent:*
+# volumes:
+#   - volume: ~/k3d_volume:/opt #
+#     nodeFilters:
+#       - server:*
+#       - agent:*
 options:
   k3d:
     wait: true

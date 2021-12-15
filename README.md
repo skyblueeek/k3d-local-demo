@@ -5,6 +5,9 @@
 # install the things you need
 brew install k3d helm argocd k9s kail
 
+# give k3d a place to persist a mounted volume on your macbook, in your home folder
+mkdir -p ~/k3d_volume
+
 # install helm charts for stuff you need
 helm repo add jetstack https://charts.jetstack.io
 helm repo add bitnami https://charts.bitnami.com/bitnami
