@@ -1,5 +1,4 @@
-# HINT: UNCOMMENT WHAT'S BELOW
-
+# HINT: UNCOMMENT
 # apiVersion: 5thkind.dev/v1alpha1
 # kind: CompositeCluster
 # metadata:
@@ -7,7 +6,7 @@
 #   labels:
 #     cluster-owner: ops-arostamian
 # spec:
-#   id: cluster-opst.armenr
+#   id: cluster-ops-armenr
 #   compositionRef:
 #     name: cluster-aws
 #   parameters:
